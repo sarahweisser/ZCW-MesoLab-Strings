@@ -8,6 +8,7 @@ public class DriversLicense {
     private String lastName;
     private String firstName;
     private String address;
+    private String city;
     private String state;
     private String licenseNumber;
     private String dateOfBirth;
@@ -42,6 +43,13 @@ public class DriversLicense {
     }
     public String getAddress() {
         return address;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+    public String getCity() {
+        return city;
     }
 
     public void setState(String state) {
@@ -114,6 +122,37 @@ public class DriversLicense {
         return licenseClass;
     }
 
-
+    public String showInfo() {
+        StringBuilder infoString = new StringBuilder();
+        infoString.append(lastName);
+        infoString.append(",");
+        infoString.append(firstName);
+        infoString.append(",");
+        infoString.append(address);
+        infoString.append(",");
+        infoString.append(city);
+        infoString.append(",");
+        infoString.append(state);
+        infoString.append(",");
+        infoString.append(licenseNumber);
+        infoString.append(",");
+        infoString.append(dateOfBirth);
+        infoString.append(",");
+        infoString.append(issueDate);
+        infoString.append(",");
+        infoString.append(expirationDate);
+        infoString.append(",");
+        infoString.append(sex);
+        infoString.append(",");
+        infoString.append(eyeColor);
+        infoString.append(",");
+        infoString.append(height);
+        infoString.append(",");
+        infoString.append(organDonor);
+        infoString.append(",");
+        infoString.append(licenseClass);
+        String info = infoString.toString();
+        return info;
+    }
 
 }
